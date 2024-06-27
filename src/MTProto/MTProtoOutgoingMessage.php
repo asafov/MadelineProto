@@ -196,6 +196,7 @@ class MTProtoOutgoingMessage extends MTProtoMessage
                 );
             }
         }
+        unset($this->connection->new_outgoing[$this->msgId], $this->connection->outgoing_messages[$this->msgId]);
 
         $this->serializedBody = null;
         $this->body = null;
